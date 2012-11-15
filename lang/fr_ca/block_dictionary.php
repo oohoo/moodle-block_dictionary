@@ -18,6 +18,7 @@ $string['add'] = 'Ajouter un dictionnaire';
 $string['dictionary'] = 'Dictionnaire Pop-up';
 $string['dictionaryname'] = 'Nom du dictionnaire ';
 $string['dictionaryurl'] = 'Adresse URL du dictionnaire';
+$string['documentation'] = 'Guide utilisateur';
 $string['edit'] = 'Modifier votre dictionnaire';
 $string['instructions'] = 'Pour activer le dictionnaire, double-cliquez sur un mot du texte';
 $string['modify'] = 'Modifier votre dictionnaire:';

@@ -135,6 +135,9 @@ class block_dictionary extends block_list
             {
                 $this->content->items[] = "<a href=\"$CFG->wwwroot/blocks/dictionary/edit.php?id=" . $usedictionary->id . "\">" . get_string('edit', 'block_dictionary') . '</a>';
             }
+			
+			//Link to documentation
+			$this->content->items[] = "<br><a href=\"https://oohoo.biz/index.php/download_file/175/215/\">".get_string('documentation', 'block_dictionary') . "</a>";
         }
         else
         {

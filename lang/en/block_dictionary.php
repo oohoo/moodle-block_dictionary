@@ -18,6 +18,7 @@ $string['add'] = 'Add a dictionary';
 $string['dictionary'] = 'Dictionary';
 $string['dictionaryname'] = 'Dictionary name';
 $string['dictionaryurl'] = 'Dictionary URL';
+$string['documentation'] = 'User guide';
 $string['edit'] = 'Change dictionary';
 $string['instructions'] = 'In order to use the dictionary, double click on a word within the displayed text';
 $string['modify'] = 'Change dictionary:';

@@ -137,7 +137,7 @@ class block_dictionary extends block_list
             }
 			
 			//Link to documentation
-			$this->content->items[] = "<br><a href=\"https://oohoo.biz/index.php/download_file/175/215/\">".get_string('documentation', 'block_dictionary') . "</a>";
+			$this->content->items[] = "<a href=\"https://oohoo.biz/index.php/download_file/175/215/\">".get_string('documentation', 'block_dictionary') . "</a>";
         }
         else
         {

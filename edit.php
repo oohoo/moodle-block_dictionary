@@ -179,6 +179,50 @@ if (empty($usedictionary->dictionary))
     ?>><?php echo $CFG->filter_dictionary_name8; ?>
                         </option>
 <?php } ?>
+<?php }if ($CFG->filter_dictionary_uri9 != '')
+{ ?>
+                        <option value="<?php echo $CFG->filter_dictionary_uri9; ?>"
+    <?php
+    if ($CFG->filter_dictionary_uri9 == $usedictionary->dictionary)
+    {
+        echo 'selected';
+    }
+    ?>><?php echo $CFG->filter_dictionary_name9; ?>
+                        </option>
+<?php } ?>
+<?php }if ($CFG->filter_dictionary_uri10 != '')
+{ ?>
+                        <option value="<?php echo $CFG->filter_dictionary_uri10; ?>"
+    <?php
+    if ($CFG->filter_dictionary_uri10 == $usedictionary->dictionary)
+    {
+        echo 'selected';
+    }
+    ?>><?php echo $CFG->filter_dictionary_name10; ?>
+                        </option>
+<?php } ?>
+<?php }if ($CFG->filter_dictionary_uri11 != '')
+{ ?>
+                        <option value="<?php echo $CFG->filter_dictionary_uri11; ?>"
+    <?php
+    if ($CFG->filter_dictionary_uri11 == $usedictionary->dictionary)
+    {
+        echo 'selected';
+    }
+    ?>><?php echo $CFG->filter_dictionary_name11; ?>
+                        </option>
+<?php } ?>
+<?php }if ($CFG->filter_dictionary_uri12 != '')
+{ ?>
+                        <option value="<?php echo $CFG->filter_dictionary_uri12; ?>"
+    <?php
+    if ($CFG->filter_dictionary_uri12 == $usedictionary->dictionary)
+    {
+        echo 'selected';
+    }
+    ?>><?php echo $CFG->filter_dictionary_name12; ?>
+                        </option>
+<?php } ?>
                 </select><br>
                 <input type="submit" name="Submit" value="<?php echo get_string("submit", "block_dictionary") ?>">
                 <input type="submit" name="cancel" value="<?php print_string('cancel') ?>" />

@@ -54,6 +54,13 @@ function xmldb_block_dictionary_upgrade($oldversion) {
         // block dictionary savepoint reached
         upgrade_block_savepoint(true, 2012111500, 'dictionary');
     }
+	if ($oldversion < 2012111501) {
+
+        //Added more dictionaries
+
+        // block dictionary savepoint reached
+        upgrade_block_savepoint(true, 2012111501, 'dictionary');
+    }
 
     
 

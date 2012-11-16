@@ -82,6 +82,10 @@ echo ($CFG->filter_dictionary_uri5 != '') ? '	<option value="' . $CFG->filter_di
 echo ($CFG->filter_dictionary_uri6 != '') ? '	<option value="' . $CFG->filter_dictionary_uri6 . '">' . $CFG->filter_dictionary_name6 . '</option>' . "\n" : '';
 echo ($CFG->filter_dictionary_uri7 != '') ? '	<option value="' . $CFG->filter_dictionary_uri7 . '">' . $CFG->filter_dictionary_name7 . '</option>' . "\n" : '';
 echo ($CFG->filter_dictionary_uri8 != '') ? '	<option value="' . $CFG->filter_dictionary_uri8 . '">' . $CFG->filter_dictionary_name8 . '</option>' . "\n" : '';
+echo ($CFG->filter_dictionary_uri9 != '') ? '	<option value="' . $CFG->filter_dictionary_uri9 . '">' . $CFG->filter_dictionary_name9 . '</option>' . "\n" : '';
+echo ($CFG->filter_dictionary_uri10 != '') ? '	<option value="' . $CFG->filter_dictionary_uri10 . '">' . $CFG->filter_dictionary_name10 . '</option>' . "\n" : '';
+echo ($CFG->filter_dictionary_uri11 != '') ? '	<option value="' . $CFG->filter_dictionary_uri11 . '">' . $CFG->filter_dictionary_name11 . '</option>' . "\n" : '';
+echo ($CFG->filter_dictionary_uri12 != '') ? '	<option value="' . $CFG->filter_dictionary_uri12 . '">' . $CFG->filter_dictionary_name12 . '</option>' . "\n" : '';
 echo '  </select><br>' . "\n";
 echo ' <input type="submit" name="Submit" value="' . get_string("submit", "block_dictionary") . '">' . "\n";
 echo ' <input type="submit" name="cancel" value="' . get_string('cancel') . '" />' . "\n";

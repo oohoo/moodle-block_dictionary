@@ -53,6 +53,7 @@ if ($form = data_submitted())
     $log->id = $id;
     $log->courseid = $courseid;
     $log->dictionary = $_REQUEST['dictionary'];
+    $log->popup = optional_param('popup', 0, PARAM_INT);
 
     if (!$DB->update_record('block_dictionary', $log))
     {
@@ -178,7 +179,6 @@ if (empty($usedictionary->dictionary))
     }
     ?>><?php echo $CFG->filter_dictionary_name8; ?>
                         </option>
-<?php } ?>
 <?php }if ($CFG->filter_dictionary_uri9 != '')
 { ?>
                         <option value="<?php echo $CFG->filter_dictionary_uri9; ?>"
@@ -189,7 +189,6 @@ if (empty($usedictionary->dictionary))
     }
     ?>><?php echo $CFG->filter_dictionary_name9; ?>
                         </option>
-<?php } ?>
 <?php }if ($CFG->filter_dictionary_uri10 != '')
 { ?>
                         <option value="<?php echo $CFG->filter_dictionary_uri10; ?>"
@@ -200,7 +199,6 @@ if (empty($usedictionary->dictionary))
     }
     ?>><?php echo $CFG->filter_dictionary_name10; ?>
                         </option>
-<?php } ?>
 <?php }if ($CFG->filter_dictionary_uri11 != '')
 { ?>
                         <option value="<?php echo $CFG->filter_dictionary_uri11; ?>"
@@ -211,7 +209,6 @@ if (empty($usedictionary->dictionary))
     }
     ?>><?php echo $CFG->filter_dictionary_name11; ?>
                         </option>
-<?php } ?>
 <?php }if ($CFG->filter_dictionary_uri12 != '')
 { ?>
                         <option value="<?php echo $CFG->filter_dictionary_uri12; ?>"
@@ -224,13 +221,14 @@ if (empty($usedictionary->dictionary))
                         </option>
 <?php } ?>
                 </select><br>
+                <input type="checkbox" name="popup" value="1" <?php echo $usedictionary->popup==1?'checked="checked"':''; ?>/><?php echo get_string("popup", "block_dictionary") ?><br>
                 <input type="submit" name="Submit" value="<?php echo get_string("submit", "block_dictionary") ?>">
                 <input type="submit" name="cancel" value="<?php print_string('cancel') ?>" />
             </td>
         </tr>
     </table>
 </form>
-<?php
+<?php 
 echo $OUTPUT->box_end();
 
 

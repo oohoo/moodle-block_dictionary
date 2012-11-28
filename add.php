@@ -50,6 +50,7 @@ if ($form = data_submitted())
     $log = new stdClass;
     $log->courseid = $course->id;
     $log->dictionary = $_REQUEST['dictionary'];
+    $log->popup = optional_param('popup', 0, PARAM_INT);
 
     if (!$DB->insert_record('block_dictionary', $log))
     {
@@ -87,6 +88,7 @@ echo ($CFG->filter_dictionary_uri10 != '') ? '	<option value="' . $CFG->filter_d
 echo ($CFG->filter_dictionary_uri11 != '') ? '	<option value="' . $CFG->filter_dictionary_uri11 . '">' . $CFG->filter_dictionary_name11 . '</option>' . "\n" : '';
 echo ($CFG->filter_dictionary_uri12 != '') ? '	<option value="' . $CFG->filter_dictionary_uri12 . '">' . $CFG->filter_dictionary_name12 . '</option>' . "\n" : '';
 echo '  </select><br>' . "\n";
+echo ' <input type="checkbox" name="popup" value="1" /> ' . get_string("popup", "block_dictionary") . '<br>' . "\n";
 echo ' <input type="submit" name="Submit" value="' . get_string("submit", "block_dictionary") . '">' . "\n";
 echo ' <input type="submit" name="cancel" value="' . get_string('cancel') . '" />' . "\n";
 echo '		</td>' . "\n";

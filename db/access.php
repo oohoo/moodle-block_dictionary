@@ -13,17 +13,19 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
  * *************************************************************************
  * ************************************************************************ */
-$string['activated'] = 'Dictionnaire utilisé :';
-$string['add'] = 'Ajouter un dictionnaire';
-$string['dictionary'] = 'Dictionnaire Pop-up';
-$string['dictionaryname'] = 'Nom du dictionnaire ';
-$string['dictionaryurl'] = 'Adresse URL du dictionnaire';
-$string['documentation'] = 'Guide utilisateur';
-$string['edit'] = 'Modifier votre dictionnaire';
-$string['instructions'] = 'Pour activer le dictionnaire, double-cliquez sur un mot du texte';
-$string['modify'] = 'Modifier votre dictionnaire:';
-$string['nodictionary'] = 'Aucun dictionnaire sélectionné';
-$string['select'] = 'Sélectionner un dictionnaire';
-$string['selecteddictionary'] = 'Dictionnaire utilisé :';
-$string['submit'] = 'Sauvegarder';
-$string['unknown_dictionary'] = 'Dictionnaire inconnu';
+
+defined('MOODLE_INTERNAL') || die();
+
+$capabilities = array(
+    'block/dictionary:addinstance' => array(
+        'riskbitmask' => RISK_SPAM | RISK_XSS,
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_BLOCK,
+        'archetypes' => array(
+            'editingteacher' => CAP_ALLOW,
+            'manager' => CAP_ALLOW
+        ),
+
+        'clonepermissionsfrom' => 'moodle/site:manageblocks'
+    ),
+);

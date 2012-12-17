@@ -25,9 +25,7 @@ class block_dictionary extends block_list
      */
     function init()
     {
-
         $this->title = get_string('dictionary', 'block_dictionary');
-        $this->version = 2010113000;
     }
 
     /**
@@ -169,5 +167,3 @@ class block_dictionary extends block_list
     }
 
 }
-
-?>

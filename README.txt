@@ -15,6 +15,7 @@ retrieve its definition from an online dictionary chosen by the teacher.
 Prerequisites
 --------------------------------------------------------------------------------
 
+Moodle 2.4.X & Moodle 2.5.X
 Download and install oohoo/moodle-filter_dictionary
 
 --------------------------------------------------------------------------------

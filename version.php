@@ -13,10 +13,10 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
  * *************************************************************************
  * ************************************************************************ */
-$plugin->version = 2012121400;
-$plugin->requires = 2010112400;
+$plugin->version = 2013061800;
+$plugin->requires = 2012120300;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.0.2 (Build: 2012121400)';
+$plugin->release = '1.1.0 (Build: 2013061800)';
 $plugin->component = 'block_dictionary';
 $plugin->cron = 0;
-$plugin->dependencies = array('filter_dictionary' => ANY_VERSION);
+$plugin->dependencies = array('filter_dictionary' => '2013061800');

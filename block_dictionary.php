@@ -165,5 +165,23 @@ class block_dictionary extends block_list
         global $CFG, $COURSE, $DB;
         return $DB->delete_records('block_dictionary', array('courseid' => $COURSE->id));
     }
+    
+        /**
+     * Set the applicable formats for this block to all
+     * @return array
+     */
+    function applicable_formats() {
+        global $COURSE;
+        if (has_capability('moodle/site:config', context_system::instance())) {
+            return array('all' => true);
+        } else {
+            
+            if (has_capability('moodle/course:manageactivitiesmoodle/course:manageactivities', context_course::instance($COURSE->id) )) {
+                return array('my'=>true , 'course-view' => true, 'mod' => true, 'tag'=> true);
+            }
+            
+            return false;
+        }
+    }
 
 }

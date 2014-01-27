@@ -176,7 +176,7 @@ class block_dictionary extends block_list
             return array('all' => true);
         } else {
             
-            if (has_capability('moodle/course:manageactivitiesmoodle/course:manageactivities', context_course::instance($COURSE->id) )) {
+            if (has_capability('moodle/course:manageactivities', context_course::instance($COURSE->id) )) {
                 return array('my'=>true , 'course-view' => true, 'mod' => true, 'tag'=> true);
             }
             

@@ -98,4 +98,3 @@ echo '</form>' . "\n";
 echo $OUTPUT->box_end();
 
 echo $OUTPUT->footer();
-?>

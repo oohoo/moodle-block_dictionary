@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * *************************************************************************
  * *                           Pop-up Dictionary                          **
@@ -12,7 +12,7 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
  * *************************************************************************
  * ************************************************************************ */
-global $CFG, $COURSE, $DB, $PAGE, $OUTPUT;
+global $CFG, $COURSE, $DB, $PAGE, $OUTPUT; 
 require_once('../../config.php');
 require_once($CFG->libdir . '/blocklib.php');
 
@@ -233,4 +233,3 @@ echo $OUTPUT->box_end();
 
 
 echo $OUTPUT->footer($course);
-?>

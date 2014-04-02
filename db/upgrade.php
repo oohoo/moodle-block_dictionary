@@ -61,11 +61,14 @@ function xmldb_block_dictionary_upgrade($oldversion)
         // dictionary savepoint reached
         upgrade_block_savepoint(true, 2012121000, 'dictionary');
     }
-    if ($oldversion < 2012121400)
+
+    if ($oldversion < 2014040200)
     {
-        // Add capabilities for Moodle 2.4
-        upgrade_block_savepoint(true, 2012121400, 'dictionary');
+        //Update logo for Moodle 2.6
+        // dictionary savepoint reached
+        upgrade_block_savepoint(true, 2014040200, 'dictionary');
     }
+
 
     return true;
 }

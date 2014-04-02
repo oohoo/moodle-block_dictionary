@@ -17,6 +17,7 @@ $string['activated'] = 'Dictionnaire utilisé :';
 $string['add'] = 'Ajouter un dictionnaire';
 $string['dictionary'] = 'Dictionnaire Pop-up';
 $string['dictionary:addinstance'] = 'Ajouter un nouveau bloc dictionnaire popup';
+$string['course_list:myaddinstance'] = 'Ajouter un nouveau bloc dictionnaire popup à ma page d\accueil';
 $string['dictionaryinstructions'] = 'Insérer une URL pour chaque champ d\'URL. Si le mot recherché n\'est pas à la fin de l\'URL, il est possible d\'ajouter un paramètre "#WORD#" qui sera remplacé par le mot au moment de la requête.<br><i>Exemple : http://www.larousse.fr/#WORD#/autre_param</i>';
 $string['dictionaryname'] = 'Nom du dictionnaire ';
 $string['dictionaryurl'] = 'Adresse URL du dictionnaire';

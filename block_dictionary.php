@@ -106,7 +106,15 @@ class block_dictionary extends block_list
                 $dictionaryname = get_string('unknown_dictionary', 'block_dictionary');
             }
         }
-        $context = get_context_instance(CONTEXT_COURSE, $COURSE->id);
+        //Replace get_context_instance by the class for moodle 2.6+
+        if(class_exists('context_module'))
+        {
+            $context = context_course::instance($COURSE->id);
+        }
+        else
+        {
+            $context = get_context_instance(CONTEXT_COURSE, $COURSE->id);
+        }
         if (has_capability('moodle/course:update', $context))
         {
             if ($this->content !== NULL)
@@ -166,7 +174,7 @@ class block_dictionary extends block_list
         return $DB->delete_records('block_dictionary', array('courseid' => $COURSE->id));
     }
     
-        /**
+    /**
      * Set the applicable formats for this block to all
      * @return array
      */
@@ -178,6 +186,10 @@ class block_dictionary extends block_list
             
             if (has_capability('moodle/course:manageactivities', context_course::instance($COURSE->id) )) {
                 return array('my'=>true , 'course-view' => true, 'mod' => true, 'tag'=> true);
+            }
+            else
+            {
+                return array('my'=>true);
             }
             
             return false;
